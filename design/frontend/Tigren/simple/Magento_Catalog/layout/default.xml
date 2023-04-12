@@ -1,0 +1,24 @@
+<!-- @author    Tigren Solutions <info@tigren.com>-->
+<!-- @copyright Copyright (c) 2023 Tigren Solutions <https://www.tigren.com>. All rights reserved.-->
+<!-- @license   Open Software License ("OSL") v. 3.0-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!--        <move element="extra-block1" destination="header.panel.wrapper" before="header.panel" />-->
+        <referenceContainer name="footer" remove="true" />
+        <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="extra-block1" template="Magento_Catalog::html/footer/links.phtml">
+                <block name="my.child.block"
+                       as="childBlock"
+                       class="Magento\Framework\View\Element\Template"
+                       template="Magento_Catalog::html/footer/my-child-template.phtml">
+                    <arguments>
+                        <argument name="title"
+                                  translate="true"
+                                  xsi:type="string">My Title
+                        </argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

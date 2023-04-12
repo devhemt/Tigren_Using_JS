@@ -1,0 +1,16 @@
+<?php
+/** @var Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+
+<style>
+
+</style>
+
+
+<div class="footer" style="margin-bottom: -25px;">
+    <p style="text-align: center;"><?= $escaper->escapeHtml(__('catalog page')) ?></p>
+
+    <?= $block->getChildHtml('childBlock') ?>
+</div>
